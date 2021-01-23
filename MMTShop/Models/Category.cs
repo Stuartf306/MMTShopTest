@@ -5,12 +5,9 @@ using System.Threading.Tasks;
 
 namespace MMTShop.Models
 {
-    public class Product
+    public class Category
     {
         public int ID { get; set; }
-        public int SKU { get; set; }
         public string Name { get; set; }
-        public string Description { get; set; }
-        public double Price { get; set; }
     }
 }

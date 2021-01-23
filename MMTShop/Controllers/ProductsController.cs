@@ -6,36 +6,46 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Net.Http;
 using MMTShop.Models;
-using MMTShop.Data;
+using System.Data.SqlClient;
 
 namespace MMTShop.Controllers
 {
-    //api/Products
-    [Route("api/[controller]")]
-    [ApiController]
     public class ProductsController : ControllerBase
     {
-        private readonly DemoProductRepo _repo = new DemoProductRepo();
-
         //GET api/Products
+        [Route("api/[controller]")]
         [HttpGet]
-        public ActionResult <IEnumerable<Product>> GetProducts()
+        public ActionResult <IEnumerable<Product>> GetFeaturedProducts() //Get all available featured products
         {
-            var products = _repo.GetProducts();
-            return Ok(products);
-        }
+            List<Product> products = new List<Product>();
 
-        //GET api/Products/{id}
-        [HttpGet("{id}")]
-        public ActionResult <Product> GetProductById(int id)
-        {
-            var product = _repo.GetProductById(id);
-            if (product == null)
+            var connString = "Server=DESKTOP-K7G724A\\SQLEXPRESS;Database=MMTShop;Trusted_Connection=True;";
+            using (SqlConnection sqlconn = new SqlConnection(connString))
             {
-                return NotFound();
+                using (SqlCommand sqlcom = new SqlCommand("sp_GetFeaturedProducts", sqlconn))
+                {
+                    sqlconn.Open();
+                    sqlcom.CommandType = System.Data.CommandType.StoredProcedure;
+
+                    SqlDataReader sqlReader = sqlcom.ExecuteReader();
+                    while (sqlReader.Read())
+                    {
+                        Product newProduct = new Product();
+                        newProduct.ID = int.Parse(sqlReader["ProductID"].ToString());
+                        newProduct.SKU = int.Parse(sqlReader["SKU"].ToString());
+                        newProduct.Name = sqlReader["Name"].ToString();
+                        newProduct.Description = sqlReader["Description"].ToString();
+                        newProduct.Price = double.Parse(sqlReader["Price"].ToString());
+
+                        products.Add(newProduct);
+                    }
+                }
             }
 
-            return Ok(product);
+            if (products.Count > 0)
+                return Ok(products);
+            else
+                return NotFound();
         }
 
     }

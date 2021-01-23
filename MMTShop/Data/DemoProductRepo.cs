@@ -16,8 +16,7 @@ namespace MMTShop.Data
                 SKU = 10000,
                 Name = "Lamp",
                 Description = "Table lamp",
-                Price = 15.00,
-                Available = true
+                Price = 15.00
             };
         }
 
@@ -26,15 +25,15 @@ namespace MMTShop.Data
             Product[] products = new Product[]
             {
             new Product {ID = 1, SKU = 10000, Name = "Lamp",
-            Description = "Table lamp", Price=15.00, Available = true},
+            Description = "Table lamp", Price=15.00},
             new Product {ID = 2, SKU = 20000, Name = "Lawnmower",
-            Description = "Electric lawnmower", Price=49.99, Available = true},
+            Description = "Electric lawnmower", Price=49.99},
             new Product {ID = 3, SKU = 30000, Name = "iPad",
-            Description = "Apple iPad", Price=230.00, Available = true},
+            Description = "Apple iPad", Price=230.00},
             new Product {ID = 4, SKU = 40000, Name = "Kettlebell",
-            Description = "15kg Kettlebell", Price=21.50, Available = true},
+            Description = "15kg Kettlebell", Price=21.50},
             new Product {ID = 5, SKU = 50000, Name = "Lego",
-            Description = "100 piece Lego set", Price=30.00, Available = true}
+            Description = "100 piece Lego set", Price=30.00}
             };
 
             return products;
@@ -45,15 +44,15 @@ namespace MMTShop.Data
             Product[] products = new Product[]
             {
             new Product {ID = 1, SKU = 10000, Name = "Lamp",
-            Description = "Table lamp", Price=15.00, Available = true},
+            Description = "Table lamp", Price=15.00},
             new Product {ID = 2, SKU = 20000, Name = "Lawnmower",
-            Description = "Electric lawnmower", Price=49.99, Available = true},
+            Description = "Electric lawnmower", Price=49.99},
             new Product {ID = 3, SKU = 30000, Name = "iPad",
-            Description = "Apple iPad", Price=230.00, Available = true},
+            Description = "Apple iPad", Price=230.00},
             new Product {ID = 4, SKU = 40000, Name = "Kettlebell",
-            Description = "15kg Kettlebell", Price=21.50, Available = true},
+            Description = "15kg Kettlebell", Price=21.50},
             new Product {ID = 5, SKU = 50000, Name = "Lego",
-            Description = "100 piece Lego set", Price=30.00, Available = true}
+            Description = "100 piece Lego set", Price=30.00}
             };
 
             return products;
