@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30611.23
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MMTShop", "MMTShop\MMTShop.csproj", "{FDB9B9BB-683F-4B00-9F79-E0F417D41EAE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MMTShop", "MMTShop\MMTShop.csproj", "{FDB9B9BB-683F-4B00-9F79-E0F417D41EAE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MMTConsole", "MMTConsole\MMTConsole.csproj", "{9658C9A3-E67B-461D-AA60-7C4933F462EC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{FDB9B9BB-683F-4B00-9F79-E0F417D41EAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FDB9B9BB-683F-4B00-9F79-E0F417D41EAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FDB9B9BB-683F-4B00-9F79-E0F417D41EAE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9658C9A3-E67B-461D-AA60-7C4933F462EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9658C9A3-E67B-461D-AA60-7C4933F462EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9658C9A3-E67B-461D-AA60-7C4933F462EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9658C9A3-E67B-461D-AA60-7C4933F462EC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
